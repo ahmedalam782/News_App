@@ -15,11 +15,13 @@ class ArticleModel {
 
   factory ArticleModel.fromJson(Map<String, dynamic> jsonData) {
     return ArticleModel(
-      image: jsonData['urlToImage'],
+      // image: jsonData['urlToImage'],
+      image: jsonData['image'],
       title: jsonData['title'],
       subTitle: jsonData['description'],
       source: Source(
-        id: jsonData['source']['id'],
+        // id: jsonData['source']['id'],
+        id: jsonData['source']['url'],
         name: jsonData['source']['name'],
       ),
       url: jsonData['url'],

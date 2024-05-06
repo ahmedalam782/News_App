@@ -10,12 +10,12 @@ class DioConsumer extends APIConsumer {
   });
 
   @override
-  Future getData(String path, {Map<String, dynamic>? queryParameters}) async {
+  Future getData(String path,
+      {Map<String, dynamic>? queryParameters, Object? data}) async {
     try {
       final response = await dio.get(
         path,
-        queryParameters: queryParameters,
-      );
+        queryParameters: queryParameters, data: data);
       return response.data;
     } on DioException catch (error) {
       return error.message;

@@ -42,6 +42,7 @@ class NewsCard extends StatelessWidget {
             Text(
               articleModel.title,
               maxLines: 2,
+              textDirection: TextDirection.rtl,
               overflow: TextOverflow.ellipsis,
               // textDirection: TextDirection.rtl,
               style: const TextStyle(
@@ -57,7 +58,7 @@ class NewsCard extends StatelessWidget {
             Text(
               articleModel.subTitle ?? '',
               maxLines: 2,
-              // textDirection: TextDirection.rtl,
+              textDirection: TextDirection.rtl,
               overflow: TextOverflow.ellipsis,
               style: const TextStyle(
                 color: Colors.grey,

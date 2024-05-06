@@ -7,14 +7,14 @@ class CategoryList extends StatelessWidget {
   const CategoryList({super.key});
 
   final List<CategoryModel> categoryList = const [
-    CategoryModel(image: 'assets/business.jpg', categoryName: 'Business'),
+    CategoryModel(image: 'assets/business.jpg', categoryName: 'business'),
     CategoryModel(
-        image: 'assets/entertaiment.jpg', categoryName: 'Entertainment'),
-    CategoryModel(image: 'assets/general.jpg', categoryName: 'General'),
-    CategoryModel(image: 'assets/science.jpg', categoryName: 'Science'),
-    CategoryModel(image: 'assets/sports.jpg', categoryName: 'Sports'),
-    CategoryModel(image: 'assets/technology.jpeg', categoryName: 'Technology'),
-    CategoryModel(image: 'assets/health.png', categoryName: 'Health'),
+        image: 'assets/entertaiment.jpg', categoryName: 'entertainment'),
+    CategoryModel(image: 'assets/general.jpg', categoryName: 'general'),
+    CategoryModel(image: 'assets/science.jpg', categoryName: 'science'),
+    CategoryModel(image: 'assets/sports.jpg', categoryName: 'sports'),
+    CategoryModel(image: 'assets/technology.jpeg', categoryName: 'technology'),
+    CategoryModel(image: 'assets/health.png', categoryName: 'health'),
   ];
 
   @override
