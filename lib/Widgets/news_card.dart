@@ -27,16 +27,28 @@ class NewsCard extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(10),
-              child: Image.network(
-                articleModel.image!,
-                height: 150,
-                width: double.infinity,
-                fit: BoxFit.cover,
-                errorBuilder: (BuildContext context, Object exception,
-                    StackTrace? stackTrace) {
-                  return const Text('😢');
-                },
-              ),
+              child: articleModel.image != null
+                  ? Image.network(
+                      articleModel.image!,
+                      height: MediaQuery.sizeOf(context).height / 4,
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                      errorBuilder: (BuildContext context, Object exception,
+                          StackTrace? stackTrace) {
+                        return Image.asset(
+                          "assets/No_Image.png",
+                          height: MediaQuery.sizeOf(context).height / 4,
+                          width: double.infinity,
+                          fit: BoxFit.fill,
+                        );
+                      },
+                    )
+                  : Image.asset(
+                      "assets/No_Image.png",
+                      height: MediaQuery.sizeOf(context).height / 4,
+                      width: double.infinity,
+                      fit: BoxFit.fill,
+                    ),
             ),
             const SizedBox(
               height: 10,
