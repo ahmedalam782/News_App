@@ -27,14 +27,16 @@ class NewsCard extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(10),
-              child: articleModel.image != null
-                  ? Image.network(
-                      articleModel.image!,
-                      height: 150,
-                      width: double.infinity,
-                      fit: BoxFit.cover,
-                    )
-                  : const SizedBox(),
+              child: Image.network(
+                articleModel.image!,
+                height: 150,
+                width: double.infinity,
+                fit: BoxFit.cover,
+                errorBuilder: (BuildContext context, Object exception,
+                    StackTrace? stackTrace) {
+                  return const Text('😢');
+                },
+              ),
             ),
             const SizedBox(
               height: 10,
